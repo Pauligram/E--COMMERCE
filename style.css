@@ -20,7 +20,7 @@ body{
     background: var(--mainWhite);
     font-family: "Lato", sans-serif;
 }
-
+/* Navbar */
 .navbar {
     position: sticky;
     top: 0;
@@ -59,7 +59,8 @@ body{
     border-radius: 30%;
     color: var(--mainWhite);
 }
-
+/* end of navbar*/
+/* Start slide with btn */
 .hero{
     min-height: calc(100vh - 60px);
     background: url(images/laptop4.jpg) center/cover no-repeat;
@@ -99,14 +100,16 @@ body{
     background: transparent;
     color: var(--primaryColor);
 }
+/* end of slide*/
+
+/*Start of Products*/
 .product {
     padding: 4rem 0;
 }
-
 .section-title h2 {
     text-align: center;
     font-size: 2.5rem;
-    margin-bottom: 5rem;
+    margin: 5rem;
     text-transform: capitalize;
     letter-spacing: var(--mainSpacing);
 }
@@ -159,7 +162,8 @@ body{
     text-transform: capitalize;
     font-size: 1.1rem;
     margin-top: 1rem;
-    letter-spacing: var(--mainSpacing)
+    letter-spacing: var(--mainSpacing);
+    text-align: center;
 
 }
 .product h4 {
@@ -168,6 +172,9 @@ body{
     color: var(--primaryColor);
     text-align: center;
 }
+/*end of product*/
+
+/*cart*/
 .cart-overlay {
   position: fixed;
   top: 0;
@@ -187,7 +194,6 @@ body{
     width: 100%;
     height: 100%;
     overflow: scroll;
-    background: var(--mainWhite);
     z-index: 3;
     background: rgb(231, 226, 221);
     padding: 1.5rem;
@@ -228,13 +234,15 @@ body{
     height: 75px;
 }
 .cart-item h4 {
-    margin: 0.85rem;
+    margin: 0.85rem 0;
     text-transform: capitalize;
     letter-spacing: var(--mainSpacing);
+  
 }
 .cart-item h5 {
     margin: 0.5rem 0;
     letter-spacing: var(--mainSpacing);
+    
 }
 .item-amount{
     text-align: center;
@@ -263,3 +271,4 @@ body{
     text-transform: capitalize;
     margin-bottom: 1rem;
 }
+/*end of cart */

@@ -4,65 +4,97 @@
     {
       "sys": { "id": "1" },
       "fields": {
-        "title": "queen panel bed",
+        "title": "lenovo laptop",
         "price": 10.99,
-        "image": { "fields": { "file": { "url": "./images/product-1.jpeg" } } }
+        "image": { "fields": { "file": { "url": "./images/laptop1.jpg" } } }
       }
     },
     {
+      "sys": { "id": "1" },
+      "fields": {
+        "title": "lenovo thinkpad",
+        "price": 10.99,
+        "image": { "fields": { "file": { "url": "./images/laptop1.jpg" } } }
+      }
+    },
+    {
+      "sys": { "id": "1" },
+      "fields": {
+        "title": "hp probook",
+        "price": 10.99,
+        "image": { "fields": { "file": { "url": "./images/laptop1.jpg" } } }
+      }
+    },   
+    {
+      "sys": { "id": "1" },
+      "fields": {
+        "title": "Dell Pavillion",
+        "price": 10.99,
+        "image": { "fields": { "file": { "url": "./images/laptop1.jpg" } } }
+      }
+    },
+    {
+      "sys": { "id": "1" },
+      "fields": {
+        "title": "Asus",
+        "price": 10.99,
+        "image": { "fields": { "file": { "url": "./images/laptop1.jpg" } } }
+      }
+    }, 
+    {
       "sys": { "id": "2" },
       "fields": {
-        "title": "king panel bed",
+        "title": "hp pavillion",
         "price": 12.99,
-        "image": { "fields": { "file": { "url": "./images/product-2.jpeg" } } }
+        "image": { "fields": { "file": { "url": "./images/laptop1.jpg" } } }
       }
     },
     {
       "sys": { "id": "3" },
       "fields": {
-        "title": "single panel bed",
+        "title": "toshiba",
         "price": 12.99,
-        "image": { "fields": { "file": { "url": "./images/product-3.jpeg" } } }
+        "image": { "fields": { "file": { "url": "./images/laptop1.jpg" } } }
       }
     },
     {
       "sys": { "id": "4" },
       "fields": {
-        "title": "twin panel bed",
+        "title": "hp elite book",
         "price": 22.99,
-        "image": { "fields": { "file": { "url": "./images/product-4.jpeg" } } }
+        "image": { "fields": { "file": { "url": "./images/laptop1.jpg" } } }
       }
     },
     {
       "sys": { "id": "5" },
       "fields": {
-        "title": "fridge",
+        "title": "dell",
         "price": 88.99,
-        "image": { "fields": { "file": { "url": "./images/product-5.jpeg" } } }
+        "image": { "fields": { "file": { "url": "./images/laptop1.jpg" } } }
       }
     },
     {
       "sys": { "id": "6" },
       "fields": {
-        "title": "dresser",
+        "title": "samsung",
         "price": 32.99,
-        "image": { "fields": { "file": { "url": "./images/product-6.jpeg" } } }
+        "image": { "fields": { "file": { "url": "./images/laptop1.jpg" } } }
       }
     },
     {
       "sys": { "id": "7" },
       "fields": {
-        "title": "couch",
+        "title": "apple pro book",
         "price": 45.99,
-        "image": { "fields": { "file": { "url": "./images/product-7.jpeg" } } }
+        "image": { "fields": { "file": { "url": "./images/laptop1.jpg" } } }
       }
     },
     {
       "sys": { "id": "8" },
       "fields": {
-        "title": "table",
+        "title": "acer",
         "price": 33.99,
-        "image": { "fields": { "file": { "url": "./images/product-8.jpeg" } } }
+        "image": { "fields": { "file": { "url": "./images/laptop1.jpg" } } }
       }
     }
   ]
