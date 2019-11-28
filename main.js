@@ -20,7 +20,6 @@ class Products {
       try {
         let result= await fetch('products.json');
         let data = await result.json();
-
         let products = data.items;
         products = products.map(item =>{
         const {title,price} =item.fields;
@@ -174,3 +173,10 @@ document.addEventListener("DOMContentLoaded", ()=> {
     ui.getBagButtons();
   });
 });
+// page loader
+var overlay = document.getElementById("loader-wrapper");
+
+window.addEventListener('load', function(){
+  overlay.style.display = 'none';
+})
+
