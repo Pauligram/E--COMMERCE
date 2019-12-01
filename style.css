@@ -60,6 +60,7 @@ body{
     color: var(--mainWhite);
 }
 /* end of navbar*/
+
 /* Start slide with btn */
 .hero{
     min-height: calc(100vh - 60px);
@@ -281,7 +282,7 @@ body{
     position: absolute;
     top: 0;
     left: 0;
-    background-color: #242f3f;
+    background-color: #f09d51;
     display: flex;
     justify-content: center;
     align-items: center;

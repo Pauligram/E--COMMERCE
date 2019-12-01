@@ -10,7 +10,7 @@
       }
     },
     {
-      "sys": { "id": "1" },
+      "sys": { "id": "2" },
       "fields": {
         "title": "lenovo thinkpad",
         "price": 10.99,
@@ -18,7 +18,7 @@
       }
     },
     {
-      "sys": { "id": "1" },
+      "sys": { "id": "3" },
       "fields": {
         "title": "hp probook",
         "price": 10.99,
@@ -26,15 +26,15 @@
       }
     },   
     {
-      "sys": { "id": "1" },
+      "sys": { "id": "4" },
       "fields": {
         "title": "Dell Pavillion",
-        "price": 10.99,
+        "price": 160.99,
         "image": { "fields": { "file": { "url": "./images/laptop1.jpg" } } }
       }
     },
     {
-      "sys": { "id": "1" },
+      "sys": { "id": "5" },
       "fields": {
         "title": "Asus",
         "price": 10.99,
@@ -42,7 +42,7 @@
       }
     }, 
     {
-      "sys": { "id": "2" },
+      "sys": { "id": "6" },
       "fields": {
         "title": "hp pavillion",
         "price": 12.99,
@@ -50,7 +50,7 @@
       }
     },
     {
-      "sys": { "id": "3" },
+      "sys": { "id": "7" },
       "fields": {
         "title": "toshiba",
         "price": 12.99,
@@ -58,7 +58,7 @@
       }
     },
     {
-      "sys": { "id": "4" },
+      "sys": { "id": "8" },
       "fields": {
         "title": "hp elite book",
         "price": 22.99,
@@ -66,7 +66,7 @@
       }
     },
     {
-      "sys": { "id": "5" },
+      "sys": { "id": "9" },
       "fields": {
         "title": "dell",
         "price": 88.99,
@@ -74,7 +74,7 @@
       }
     },
     {
-      "sys": { "id": "6" },
+      "sys": { "id": "10" },
       "fields": {
         "title": "samsung",
         "price": 32.99,
@@ -82,7 +82,7 @@
       }
     },
     {
-      "sys": { "id": "7" },
+      "sys": { "id": "11" },
       "fields": {
         "title": "apple pro book",
         "price": 45.99,
@@ -90,7 +90,7 @@
       }
     },
     {
-      "sys": { "id": "8" },
+      "sys": { "id": "12" },
       "fields": {
         "title": "acer",
         "price": 33.99,

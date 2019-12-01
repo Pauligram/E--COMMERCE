@@ -18,17 +18,18 @@ let buttonsDOM = [];
 class Products {
   async getProducts() {
       try {
-        let result= await fetch('products.json');
+        let result = await fetch("products.json");
         let data = await result.json();
         let products = data.items;
-        products = products.map(item =>{
+        products = products.map(item => {
         const {title,price} =item.fields;
         const {id} =item.sys;
         const image = item.fields.image.fields.file.url;
         return {title,price,id,image}
         })
         return products;
-      } catch (error) {
+      } 
+      catch (error) {
         // console.log(error);
       }
    
@@ -36,11 +37,11 @@ class Products {
 }
 
 //display products
-class UI{
+class UI {
    displayproducts(products){
      
      let result = "";
-     products.forEach( product => {
+     products.forEach (product => {
        result +=`
            <article class="product">
                  <div class="img-container">
@@ -100,8 +101,8 @@ class UI{
     cart.map(item => {
       tempTotal += item.price * item.amount;
       itemsTotal += item.amount;
-    });
-    cartTotal.innertText = parseFloat(tempTotal.toFixed (2));
+    })
+    cartTotal.innertText = parseFloat(tempTotal.toFixed (2))
     cartItems.innerText = itemsTotal;
     // console.log(cartTotal, cartItems);
   }
@@ -178,5 +179,12 @@ var overlay = document.getElementById("loader-wrapper");
 
 window.addEventListener('load', function(){
   overlay.style.display = 'none';
+  // overlay.style.backgroundColor = 'yellow';
+
 })
+
+// let a="" + 1 + 0
+// console.log(a);
+// let b = "" -1 + 0;
+// console.log (b);
 
