@@ -4,16 +4,48 @@
     {
       "sys": { "id": "1" },
       "fields": {
-        "title": "lenovo laptop",
-        "price": 10.99,
+        "title": "hp pavillion dv6",
+        "price": 165.45,
         "image": { "fields": { "file": { "url": "./images/laptop1.jpg" } } }
       }
     },
     {
       "sys": { "id": "2" },
       "fields": {
-        "title": "lenovo thinkpad",
-        "price": 10.99,
+        "title": "hp invent",
+        "price": 175.53,
+        "image": { "fields": { "file": { "url": "./images/laptop1.jpg" } } }
+      }
+    },
+    {
+      "sys": { "id": "2" },
+      "fields": {
+        "title": "hp invent",
+        "price": 175.53,
+        "image": { "fields": { "file": { "url": "./images/laptop1.jpg" } } }
+      }
+    },
+    {
+      "sys": { "id": "2" },
+      "fields": {
+        "title": "hp invent",
+        "price": 175.53,
+        "image": { "fields": { "file": { "url": "./images/laptop1.jpg" } } }
+      }
+    },
+    {
+      "sys": { "id": "2" },
+      "fields": {
+        "title": "hp invent",
+        "price": 175.53,
+        "image": { "fields": { "file": { "url": "./images/laptop1.jpg" } } }
+      }
+    },
+    {
+      "sys": { "id": "2" },
+      "fields": {
+        "title": "hp invent",
+        "price": 175.53,
         "image": { "fields": { "file": { "url": "./images/laptop1.jpg" } } }
       }
     },
@@ -21,7 +53,7 @@
       "sys": { "id": "3" },
       "fields": {
         "title": "hp probook",
-        "price": 10.99,
+        "price": 180.45,
         "image": { "fields": { "file": { "url": "./images/laptop1.jpg" } } }
       }
     },   
@@ -29,31 +61,31 @@
       "sys": { "id": "4" },
       "fields": {
         "title": "Dell Pavillion",
-        "price": 160.99,
+        "price": 160.33,
         "image": { "fields": { "file": { "url": "./images/laptop1.jpg" } } }
       }
     },
     {
       "sys": { "id": "5" },
       "fields": {
-        "title": "Asus",
-        "price": 10.99,
+        "title": "hp invent",
+        "price": 109.99,
         "image": { "fields": { "file": { "url": "./images/laptop1.jpg" } } }
       }
     }, 
     {
       "sys": { "id": "6" },
       "fields": {
-        "title": "hp pavillion",
-        "price": 12.99,
+        "title": "hp pavillion dv7",
+        "price": 112.99,
         "image": { "fields": { "file": { "url": "./images/laptop1.jpg" } } }
       }
     },
     {
       "sys": { "id": "7" },
       "fields": {
-        "title": "toshiba",
-        "price": 12.99,
+        "title": "hp pavillion 2000",
+        "price": 142.99,
         "image": { "fields": { "file": { "url": "./images/laptop1.jpg" } } }
       }
     },
@@ -61,22 +93,22 @@
       "sys": { "id": "8" },
       "fields": {
         "title": "hp elite book",
-        "price": 22.99,
+        "price": 200.99,
         "image": { "fields": { "file": { "url": "./images/laptop1.jpg" } } }
       }
     },
     {
       "sys": { "id": "9" },
       "fields": {
-        "title": "dell",
-        "price": 88.99,
+        "title": "hp pavillion dv6",
+        "price": 130.22,
         "image": { "fields": { "file": { "url": "./images/laptop1.jpg" } } }
       }
     },
     {
       "sys": { "id": "10" },
       "fields": {
-        "title": "samsung",
+        "title": "hp probook",
         "price": 32.99,
         "image": { "fields": { "file": { "url": "./images/laptop1.jpg" } } }
       }
@@ -84,16 +116,16 @@
     {
       "sys": { "id": "11" },
       "fields": {
-        "title": "apple pro book",
-        "price": 45.99,
+        "title": "hp elitebook",
+        "price": 100.13,
         "image": { "fields": { "file": { "url": "./images/laptop1.jpg" } } }
       }
     },
     {
       "sys": { "id": "12" },
       "fields": {
-        "title": "acer",
-        "price": 33.99,
+        "title": "hp elitebook",
+        "price": 120.44,
         "image": { "fields": { "file": { "url": "./images/laptop1.jpg" } } }
       }
     }

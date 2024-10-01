@@ -1,13 +1,13 @@
 //variable declaration
-const cartBtn = document.querySelector('.cart-btn');
-const closeCartBtn = document.querySelector('.close-cart');
-const clearCartBtn = document.querySelector('.clear-cart');
-const cartDOM = document.querySelector('.cart');
-const cartOverlay = document.querySelector('.cart-overlay');
-const cartItems = document.querySelector('.cart-items');
-const cartTotal = document.querySelector('.cart-total');
-const cartContent = document.querySelector('.cart-content');
-const productsDOM = document.querySelector(".product-center");
+const cartBtn = document.querySelector(".cart-btn");
+const closeCartBtn = document.querySelector(".close-cart");
+const clearCartBtn = document.querySelector(".clear-cart");
+const cartDOM = document.querySelector(".cart");
+const cartOverlay = document.querySelector(".cart-overlay");
+const cartItems = document.querySelector(".cart-items");
+const cartTotal = document.querySelector(".cart-total");
+const cartContent = document.querySelector(".cart-content");
+const productsDOM = document.querySelector(".products-center");
 //cart
 let cart = [];
 
@@ -62,23 +62,24 @@ class UI {
      });
      productsDOM.innerHTML = result;
    }
-   getBagButtons(){
+   getBagButtons() {
     const buttons = [...document.querySelectorAll(".bag-btn")]; 
     buttonsDOM = buttons;
     buttons.forEach(button => {
       let id = button.dataset.id;
-      let inCart= cart.find(item => item.id ===id);
-      if(inCart) {
-        button.innerText = "inCart";
+      let inCart= cart.find(item => item.id === id);
+      if (inCart) {
+        button.innerText = "In Cart";
         button.disabled= true;
       }
       else {
-        button.addEventListener('click', (event) => {
-          event.target.innerText ="inCart"
+        button.addEventListener("click", (event) => {
+          event.target.innerText ="In Cart"
           event.target.disabled - true;
 
-          //get products from products
-          let cartItem = {...Storage.getproduct(id), amount:1};
+          //get product from products
+          let cartItem = {...Storage.getproduct(id),
+             amount:1};
             //  console.log(cartItem);
           //add product to the cart
           cart = [...cart, cartItem];
@@ -91,7 +92,7 @@ class UI {
           this.addCartItem(cartItem);
           //show cart
           this.showCart();
-          })
+          });
       }
     }); 
   }
@@ -102,14 +103,14 @@ class UI {
       tempTotal += item.price * item.amount;
       itemsTotal += item.amount;
     })
-    cartTotal.innertText = parseFloat(tempTotal.toFixed (2))
+    cartTotal.innerText = parseFloat(tempTotal.toFixed (2));
     cartItems.innerText = itemsTotal;
     // console.log(cartTotal, cartItems);
   }
   addCartItem(item) {
     const div = document.createElement ('div');
     div.classList.add('cart-item');
-    div.innerHTML = ` <img src=${item.image} alt="product">
+    div.innerHTML = `<img src=${item.image} alt="product">
     <div>
         <h4>${item.title}</h4>
         <h5>$${item.price}</h5>
@@ -119,7 +120,7 @@ class UI {
         <i class="fas fa-chevron-up" data-id=${item.id}></i>
         <p class="item-amount">${item.amount}</p> 
         <i class="fas fa-chevron-down" data-id=${item.id}></i>
-        </div>`
+    </div>`
         cartContent.appendChild(div);
         // console.log(cartContent);
   }
@@ -131,15 +132,83 @@ class UI {
     cart = Storage.getCart();
     this.setCartValues(cart);
     this.populateCart(cart);
-    cartBtn.addEventListener("click", this.showCart);
-    closeCartBtn.addEventListener("click", this.hideCart)
+    cartBtn.addEventListener("click",this.showCart);
+    closeCartBtn.addEventListener("click",this.hideCart)      
   }
   populateCart(cart) {
     cart.forEach(item =>this.addCartItem(item));
   }
   hideCart() {
-    cartOverlay.classList.remove('transparentBcg');
-    cartDOM.classList.remove("showcart");
+    cartOverlay.classList.remove("transparentBcg");
+    cartDOM.classList.remove("showCart");
+  }
+  //clear cart button
+  cartLogic() {
+    clearCartBtn.addEventListener("click", () => {
+      this.clearCart();
+    })
+    //cart functionality
+    cartContent.addEventListener("click", () => {
+      // console.log(event.target);
+      // this.clearCart();
+      if (event.target.classList.contains("remove-item")
+      ) {
+        let removeItem = event.target;
+        // console.log(removeItem);
+        let id = removeItem.dataset.id;
+        // console.log(removeItem.parentElement.parentElement);
+        cartContent.removeChild(removeItem.parentElement.parentElement);
+        this.removeItem(id);
+      }
+      else if (event.target.classList.contains("fa-chevron-up")) {
+        let addAmount = event.target;
+        let id = addAmount.dataset.id;  
+        let tempItem = cart.find(item => item.id === id);
+        tempItem.amount = tempItem.amount + 1;
+        Storage.saveCart(cart);
+        this.setCartValues(cart);
+        addAmount.nextElementSibling.innerText = tempItem.amount;
+      }
+      else if (event.target.classList.contains("fa-chevron-down")) {
+        let lowerAmount = event.target;
+        let id = lowerAmount.dataset.id;
+        let tempItem = cart.find(item => item.id === id);
+        tempItem.amount = tempItem.amount - 1;
+        if(tempAmount > 0){
+          Storage.saveCart(cart);
+          this.setCartValues(cart);
+          lowerAmount.previousElementSibling.innerText = tempItem.tempAmount;
+        }
+        else {
+          cartContent.removeChild(lowerAmount.parentElement.parentElement);
+          this.removeItem(id);
+        }
+      } 
+      // console.log(addAmount);
+    });
+  }
+  
+  clearCart(){
+    let cartItems = cart.map(item => item.id);
+    cartItems.forEach(id => this.removeItem(id));
+    // console.log(cartContent.children);
+
+    while(cartContent.Children.length > 0) {
+      cartContent.removeChild(cartContent.Children[1]);
+    }
+    this.hideCart();
+  }
+  removeItem(id) {
+    cart = cart.filter(item => item.id !== id);
+    this.setCartValues(cart);
+    Storage.saveCart(cart);
+    let button = this.getSingleButton(id);
+    button.disabled = false;
+    button.innerHTML = `<i class="fas fa-shopping-cart"></i>add to cart`; 
+
+  }
+  getSingleButton(id) {
+    return buttonsDOM.find(button => button.dataset.id === id);
   }
 }
 
@@ -149,19 +218,17 @@ class Storage{
      localStorage.setItem("products", JSON.stringify(products));
    }
    static getproduct(id) {
-     let products = JSON.parse(localStorage.getItem('products'));
-     //bug of products
-     return products.find(product=> product.id=== id);
+     let products = JSON.parse(localStorage.getItem("products"));
+     return products.find(product => product.id === id);
    }
-   static saveCart() {
+   static saveCart (cart) {
      localStorage.setItem("cart", JSON.stringify(cart));
    }
    static getCart() {
      return localStorage.getItem("cart")?JSON.parse(localStorage.getItem("cart")):[]
    }
 }
-
-document.addEventListener("DOMContentLoaded", ()=> {
+document.addEventListener("DOMContentLoaded", () => {
     const ui = new UI ();
     const products= new Products();
     //setupAPP
@@ -170,10 +237,12 @@ document.addEventListener("DOMContentLoaded", ()=> {
     products.getProducts().then(products => { 
       ui.displayproducts (products);
     Storage.saveproducts(products);
-  }).then(() =>{
+  }).then(() => {
     ui.getBagButtons();
+    ui.cartLogic();
   });
 });
+
 // page loader
 var overlay = document.getElementById("loader-wrapper");
 
